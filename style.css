@@ -1,150 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
 * {
-    margin: 0;
-
-    padding: 0;
-
     box-sizing: border-box;
-
-    font-family: 'Open Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
 }
-
-.banner {
-    position: relative;
+body {
+    background-color: #435165;
+    margin: 0;
+}
+.register {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.register h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.register form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    padding: 100px;
-    background: #fff;
-
-    transition: 0.5;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
 }
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+   height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.register form input[type="submit"] {
     width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-I header .Logo {
-    color: #333;
-    font-size: 2em;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-header .logo span {
-
-    color: #2196f3;
-}
-
-header ul {
-    display: flex;
-
-    gap: 40px;
-}
-
-header ul li {
-
-    list-style: none;
-}
-
-header ul li {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2em;
-    color: #333;
-    transition: 0.5s;
-}
-
-.content {
-    position: relative;
-    max-width: 700px;
-    z-index: 10;
-
-}
-
-.content h3 {
-    font-size: 2em;
-    color: #333;
-    font-weight: 200;
-    transition: 0.5s;
-
-}
-
-.content h2 {
-    font-size: 5.5em;
-    color: #333;
-    font-weight: 700;
-    transition: 0.5s;
-}
-
-.content h2 span {
-    color: #e91e63;
-}
-
-.content p {
-    font-size: 1.2em;
-    color: #666;
-    margin: 10px 0;
-    transition: 0.5s;
-}
-
-.content button {
-    position: relative;
-    background: #2196f3;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 15px 35px;
-    font-size: 1.25em;
-    letter-spacing: 0.05e;
-    margin-right: 20px;
-    border-radius: 4px;
-    font-weight: 600;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+   border: 0;
     cursor: pointer;
-    transition: 0.5s;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
 }
-
-.content button.chat {
-    background: transparent;
-    color: #333;
-}
-
-.content button.chat ion-icon {
-
-    position: relative;
-    top: 5px;
-    color: #e91e63;
-    font-size: 1.5em;
-
-}
-
-.sci {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    gap: 20px;
-}
-
-.sci li {
-    list-style: none;
-}
-
-.sci li a {
-    text-decoration: none;
-    font-size: 1.75em;
-    color: #333;
-}
-.sci li a:hover
-{
-    color: #2196f3;
+.register form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
 }
