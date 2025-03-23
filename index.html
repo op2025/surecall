@@ -1,4 +1,235 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureCall - Civil Engineering & Real Estate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles with Vibrant Gradient */
+        header {
+            background: linear-gradient(90deg, #ff6f61, #ffcc00, #40c4ff);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-links li a:hover {
+            color: #ffeb3b;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section with Colorful Gradient */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(255, 111, 97, 0.8), rgba(64, 196, 255, 0.8)), 
+                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            color: #ffeb3b;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #ff4081, #ffeb3b);
+            color: #1a2a44;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(45deg, #f50057, #fdd835);
+            transform: scale(1.05);
+        }
+
+        /* Services Section with Colorful Accents */
+        .services {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #e0f7fa, #f8bbd0);
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #d81b60;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: linear-gradient(135deg, #b2ff59, #40c4ff);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, background 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, #76ff03, #0288d1);
+        }
+        .service-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .service-card p {
+            color: #fff9c4;
+        }
+
+        /* Footer with Bright Gradient */
+        footer {
+            background: linear-gradient(90deg, #ff4081, #ffeb3b, #40c4ff);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        footer p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .social-links a {
+            color: #ffffff;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-links a:hover {
+            color: #d81b60;
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .services h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SureCall</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Building Your Future with SureCall</h1>
+            <p>Expert Civil Engineering and Real Estate Solutions</p>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Civil Engineering</h3>
+                <p>From structural design to project management, we ensure quality and precision in every build.</p>
+            </div>
+            <div class="service-card">
+                <h3>Real Estate Development</h3>
+                <p>Creating sustainable and modern living spaces tailored to your needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consulting Services</h3>
+                <p>Expert advice for all your construction and property development projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>© 2025 SureCall. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll effect
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
 
 <html>
 
@@ -62,3 +293,4 @@ initial-scale=1.0">
 </script>
 </body>
 </html>
+ -->
