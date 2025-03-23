@@ -1,4 +1,231 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureCall - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles with Professional Gradient */
+        header {
+            background: linear-gradient(90deg, #2c3e50, #34495e); /* Navy to Dark Gray */
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .nav-links li a:hover {
+            color: #16a085; /* Teal Accent */
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem 4rem; /* Extra top padding for fixed header */
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7); /* Light Gray to Medium Gray */
+            min-height: 100vh;
+            text-align: center;
+        }
+        .about h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50; /* Navy */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .about p.intro {
+            font-size: 1.2rem;
+            color: #34495e; /* Dark Gray */
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        .founders {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .founder-card {
+            background: linear-gradient(135deg, #ffffff, #f5f6f5); /* White to Off-White */
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #f5f6f5, #d5dbdb); /* Off-White to Light Gray */
+        }
+        .founder-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 4px solid #16a085; /* Teal */
+            transition: border-color 0.3s;
+        }
+        .founder-card:hover img {
+            border-color: #2c3e50; /* Navy */
+        }
+        .founder-card h2 {
+            font-size: 1.8rem;
+            color: #2c3e50; /* Navy */
+            margin-bottom: 0.5rem;
+        }
+        .founder-card p.role {
+            font-size: 1.1rem;
+            color: #16a085; /* Teal */
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .founder-card p.bio {
+            font-size: 1rem;
+            color: #7f8c8d; /* Muted Gray */
+            line-height: 1.6;
+        }
+
+        /* Footer with Professional Gradient */
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #34495e); /* Navy to Dark Gray */
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .social-links a {
+            color: #ffffff;
+            margin: 0 0.75rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #16a085; /* Teal */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .about h1 {
+                font-size: 2rem;
+            }
+            .about p.intro {
+                font-size: 1rem;
+            }
+            .founders {
+                flex-direction: column;
+                align-items: center;
+            }
+            .founder-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SureCall</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1>About Us</h1>
+        <p class="intro">
+            At SureCall, we’re committed to shaping the future with cutting-edge civil engineering and real estate solutions. Founded by Omprakash Sharma and Preetam Maurya, and strengthened by the expertise of Anuj Lamba, our team blends creativity, precision, and sustainability to build lasting legacies.
+        </p>
+        <div class="founders">
+            <div class="founder-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop" alt="Omprakash Sharma">
+                <h2>Omprakash Sharma</h2>
+                <p class="role">Co-Founder & Structural Innovator</p>
+                <p class="bio">
+                    Omprakash Sharma co-founded SureCall with a mission to redefine structural engineering. His expertise lies in designing resilient, eco-friendly infrastructures that harmonize with nature, bringing over 15 years of hands-on experience to every project.
+                </p>
+            </div>
+            <div class="founder-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Preetam Maurya">
+                <h2>Preetam Maurya</h2>
+                <p class="role">Co-Founder & Urban Development Specialist</p>
+                <p class="bio">
+                    Preetam Maurya, a visionary in urban planning, co-founded SureCall to craft sustainable living spaces. With a decade of experience, he excels in transforming ideas into thriving communities that balance modernity and environmental harmony.
+                </p>
+            </div>
+            <div class="founder-card">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop" alt="Anuj Lamba">
+                <h2>Anuj Lamba</h2>
+                <p class="role">Expert & MNNIT Allahabad Topper</p>
+                <p class="bio">
+                    Anuj Lamba, a distinguished topper from MNNIT Allahabad, joins SureCall as a key expert. His technical brilliance and innovative problem-solving skills drive our projects to new heights in engineering and design excellence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 SureCall. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- <!DOCTYPE html>
 
   
 <link rel="stylesheet" href="about.css">
@@ -11,4 +238,4 @@
     <h2>Support Our Mission</h2>
     <p>Your donation can help us reach more learners and improve our world. Every dollar matters ,same way every human in this world matters:
         vasudhaiva kutumbakam
-</p>
+</p> -->
